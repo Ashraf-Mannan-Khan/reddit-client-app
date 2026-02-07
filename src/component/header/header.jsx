@@ -32,6 +32,8 @@ export function Header({ show, setShow, light, setLight }) {
             className={styles.searchbar}
             placeholder="Find Anything"
             id="searchbar"
+            value={searchTerm}
+            onChange={searchTermSetter}
           />
         </div>
 

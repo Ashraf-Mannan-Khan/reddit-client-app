@@ -10,7 +10,7 @@ export const fetchAllReddits = createAsyncThunk(
 );
 
 export const fetchPostByQuery = createAsyncThunk('redditsPost/fetchPostByQuery', async(searchQuery, thunkApi) => {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/?q=${searchQuery}&limit=20`);
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/search?q=${searchQuery}&limit=20`);
     const jsonResponse = await response.json();
     return jsonResponse.data.children;
 });

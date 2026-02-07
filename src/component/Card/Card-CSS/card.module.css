@@ -1,0 +1,257 @@
+.card {
+  width: 40%;
+  max-width: 800px;
+  min-width: 500px;
+  height: fit-content;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 75px;
+  background: #fff;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+}
+.card:last-child {
+  margin-bottom: 1rem;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+.dark {
+  background-color: rgba(0, 0, 0, 0.454);
+  color: white;
+  border: 1px solid white;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.div_text_and_button,
+.div_text_timestamp,
+.div_text,
+.div_button {
+  display: flex;
+}
+.div_text_and_button {
+  align-items: center;
+}
+
+.div_text_timestamp {
+  gap: 1rem;
+  align-items: center;
+}
+
+.div_text {
+  align-items: center;
+}
+.div_text_and_button {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.div_text {
+  gap: 1rem;
+}
+.div_text h3 {
+  font-size: 16px;
+}
+
+.timestamp p {
+  color: grey;
+  font-size: 14px;
+}
+
+.title {
+  font-size: 18px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 65ch;
+  line-height: 1.5;
+  font-weight: 800;
+}
+.selftext {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-inline: auto;
+}
+.div_button {
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn_join {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  height: 20px;
+  width: 20px;
+  font-size: 14px;
+  background: #0a449b;
+  border: none;
+  border-radius: 20px;
+  color: white;
+}
+
+.bubble_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div_like_comment_share,
+.div_like_dislike,
+.div_comment,
+.div_share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-top: 0.5rem;
+}
+
+.div_like_comment_share {
+  justify-content: space-around;
+}
+
+.div_like_dislike,
+.div_comment,
+.div_share {
+  gap: 0.5rem;
+  border-radius: 10px;
+  width: 30%;
+  width: 150px;
+  height: fit-content;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.div_like_dislike:hover,
+.div_comment:hover,
+.div_share:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.commentBtn,
+.shareBtn {
+  width: 20px;
+  height: 20px;
+}
+.upvoteBtn,
+.downvoteBtn {
+  width: 20px;
+  height: 20px;
+}
+
+.img_container {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: #999999;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  outline: 1px solid silver;
+}
+
+.reactmarkdown {
+  width: 100%;
+  margin-bottom: 1rem;
+  overflow-wrap: break-word; /* modern */
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: 90%;
+    min-width: 250px;
+   padding: .5rem;
+  }
+  .logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .div_text {
+    display: flex;
+
+    align-items: center;
+  }
+  .div_text_timestamp {
+    display: inline-block;
+  }
+
+  .timestamp {
+    margin-left: 3rem;
+  }
+  .div_text h3 {
+    font-size: 12px;
+  }
+  .timestamp p {
+    color: grey;
+    font-size: 12px;
+  }
+
+  .div_button {
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn_join {
+    font-size: 12px;
+  }
+  .div_like_comment_share {
+    width: 100%;
+  }
+  .div_like_comment_share,
+  .div_like_dislike,
+  .div_comment,
+  .div_share {
+    font-size: 12px;
+  }
+
+  .div_like_dislike,
+  .div_comment,
+  .div_share {
+    gap: 0.5rem;
+    border-radius: 10px;
+    padding-inline: 10px;
+    font-size: 1rem;
+    width: fit-content;
+  }
+
+  .img_container {
+    border-radius: 10px;
+  }
+
+  .reactmarkdown {
+    font-size: 1rem;
+  }
+
+  .commentBtn,
+  .shareBtn {
+    width: 20px;
+    height: 20px;
+  }
+  .upvoteBtn,
+  .downvoteBtn {
+    width: 20px;
+    height: 20px;
+  }
+}

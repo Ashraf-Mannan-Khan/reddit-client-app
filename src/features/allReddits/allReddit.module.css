@@ -1,0 +1,28 @@
+* { 
+  box-sizing: border-box;
+
+}
+.card_div {
+   display: flex;
+  flex-direction: column;
+   width: 100vw;
+   align-items: center;
+  overflow-y: hidden;
+  padding-top: 1rem;
+}
+.dark {
+  background-color: #000000;
+  color: white;
+}
+
+.light{
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@media screen and (max-width) {
+  .card_div {
+    width: 200%;
+    
+  }
+}

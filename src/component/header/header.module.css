@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header_desktop {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(190, 190, 190);
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.dark {
+  background-color: #000000;
+  color: white;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+.logo {
+  font-size: 2rem;
+  text-transform: capitalize;
+
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text; /* Safari / Chrome */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 1rem;
+
+}
+.input_wrapper {
+  width: 80%;
+  max-width: 800px;
+  min-width: 250px;
+  position: relative;
+}
+.searchbar {
+  width: 100%;
+  height: 80%;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(10deg, #ff6a00, #ee0979) border-box;
+  padding-left: 2rem;
+  box-sizing: border-box;
+
+}
+
+.btn_and_img {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5%;
+  width: 400px;
+}
+.menu_icon {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.search_icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  color: #ff6a00;
+  cursor: pointer;
+  z-index: 10;
+  pointer-events: none;
+}
+.closeBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.searchbar:focus {
+  border: 2px solid #ff6a00;
+  outline: none;
+}
+
+.login_btn {
+  color: white;
+  border-radius: 20px;
+  background-color: red;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  padding-block: 8px;
+  max-width: 100px;
+  width: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 17vw;
+  margin-right: 1rem;
+}
+.login_btn:hover {
+  color: white;
+  background-color: #ff6a00;
+  border: 1.5px solid transparent;
+  background: linear-gradient(white, white) broder-box
+    linear-gradient(10deg, #ff6a00, #ee0979) padding-box;
+}
+.btn_wrapper {
+  margin-right: 2rem;
+}
+.moon_and_sun_btn {
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid rgb(129, 128, 128);
+  transition: background-color 2s ease;
+}
+.clicked {
+  display: flex;
+  align-items: flex-end;
+  background-color: black;
+  justify-content: center;
+}
+
+.div_sun {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.sun {
+  background-color: rgb(255, 255, 148);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  padding: 3px 5px;
+}
+.moon {
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 3px 5px;
+}
+.image {
+  height: 40px;
+  width: 40px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.header_phone,
+.phone_sideNav {
+  display: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+  /* Optional: use 'appearance: none;' for a more comprehensive reset */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+@media screen and (max-width: 850px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .desktop_sideNav {
+    display: none;
+  }
+  .header_desktop {
+    display: none;
+  }
+
+  .header_phone {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1003;
+    border-bottom: 1px solid rgb(158, 158, 158);
+  }
+
+  .menu_icon {
+    cursor: pointer;
+    max-width: 64px;
+    min-width: 28px;
+    margin-right: 0.5rem;
+  }
+  .search_btn {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    transform: translate(50%, -50%);
+    left: 50%;
+    color: #ee0979;
+  }
+  .input_wrapper {
+    max-width: 50%;
+    min-width: 100px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .searchbar {
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    background:
+      linear-gradient(white, white) padding-box,
+      linear-gradient(10deg, #ff6a00, #ee0979) border-box;
+  }
+  .search_icon {
+  left: 85%;
+  }
+  .login_btn {
+  padding: auto;
+  }
+
+  .searchbar:focus {
+    border: 2px solid #ff6a00;
+    outline: none;
+  }
+
+  .image {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: auto;
+  }
+    .dark {
+  background-color: #000000;
+  color: white;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+}
+
+@media screen and (max-width: 568px) {
+  .dark {
+  background-color: #000000;
+  color: white;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+  .input_wrapper {
+    margin-right: 1rem;
+  }
+  .searchbar {
+    padding-right: 2rem;
+  }
+  .search_icon {
+    left: 70%;
+  }
+
+  .login_btn {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 20px;
+    background-color: red;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    
+   
+  }
+  .login_btn:hover {
+    color: white;
+    background-color: #ff6a00;
+    border: 1.5px solid transparent;
+    background: linear-gradient(white, white) broder-box
+      linear-gradient(10deg, #ff6a00, #ee0979) padding-box;
+  }
+
+  .moon_and_sun_btn {
+    width: 50px;
+    height: 50px;
+
+
+    border-radius: 50%;
+  }
+
+  .clicked {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    justify-content: center;
+  }
+
+  .div_sun {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .sun {
+    background-color: rgb(255, 255, 148);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 3px 5px;
+  }
+  .moon {
+    background-color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 3px 5px;
+  }
+  .image {
+    margin-right: 0;
+  }
+}

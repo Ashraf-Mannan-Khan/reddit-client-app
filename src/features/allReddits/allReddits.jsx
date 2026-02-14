@@ -28,11 +28,12 @@ export function LoadAllRedditsPost({ light }) {
 
     return () => clearTimeout(timeoutId);
   }, [searchTerm, dispatch]);
+  
+
 
   const loadingishappening = useSelector(loading);
   const { isLoadingAll, isLoadingSearch, isLoadingKeyword } = loadingishappening;
-  console.log(isLoadingAll);
-
+  console.log(allRedditsPost);
   return (
     <>
       <div

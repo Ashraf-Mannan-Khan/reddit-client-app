@@ -91,30 +91,7 @@
   outline: none;
 }
 
-.login_btn {
-  color: white;
-  border-radius: 20px;
-  background-color: red;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  padding-block: 8px;
-  max-width: 100px;
-  width: 50px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  width: 17vw;
-  margin-right: 1rem;
-}
-.login_btn:hover {
-  color: white;
-  background-color: #ff6a00;
-  border: 1.5px solid transparent;
-  background: linear-gradient(white, white) broder-box
-    linear-gradient(10deg, #ff6a00, #ee0979) padding-box;
-}
+
 .btn_wrapper {
   margin-right: 2rem;
 }

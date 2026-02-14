@@ -1,14 +1,27 @@
-import { useState, useRef } from "react";
+import { useState, useRef, use } from "react";
 import { useSelector } from "react-redux";
 import styles from "./Card-CSS/card.module.css";
 import logo from "./image1.jpeg";
-import { ThumbsUp, ThumbsDown, MessageCircle, Ellipsis } from "lucide-react";
+import {
+  ThumbsUp,
+  ThumbsDown,
+  MessageCircle,
+  Ellipsis,
+  Bell,
+  Bookmark,
+  EyeOff,
+  Flag,
+  Link,
+  Facebook,
+  Instagram,
+  Mail,
+} from "lucide-react";
 import { CiShare2 } from "react-icons/ci";
 import { PostMedia } from "./videoImage";
 import ReactMarkdown from "react-markdown";
 import { loading } from "../../features/allReddits/allRedditsSlice";
 import { SkeletonLoader } from "../../helper function/loader";
-
+import { SideCard } from "../side-card/sideCard";
 
 export function Card({
   subreddit,
@@ -26,12 +39,14 @@ export function Card({
   const [dislike, setDislike] = useState(false);
   const [hoverOnLike, setHoverOnLike] = useState(false);
   const [hoverOnDislike, setHoverOnDislike] = useState(false);
+  const [join, setJoin] = useState(false);
+  const [sideCardShow, setSideCardShow] = useState(false);
+  const [sideCardShareShow, setSideCardShareShow] = useState(false);
   const likeStyle = like ? "#6a5cff " : "white";
   const dislikeStyle = dislike ? "#d93900" : "white";
   const hoverLikeStyle = hoverOnLike ? "#6a5cff " : "black";
   const hoverDislikeStyle = hoverOnDislike ? "#d93900" : "black";
-  
- 
+
   let thumbnailUrl = thumbnail?.replaceAll("&amp;", "&");
   if (
     thumbnailUrl === "default" ||
@@ -41,10 +56,11 @@ export function Card({
     thumbnailUrl = logo;
   }
 
+  
 
   return (
     <>
-    <article
+      <article
         className={`${styles.card} ${light ? styles.dark : styles.light}`}
         key={id}
       >
@@ -60,9 +76,39 @@ export function Card({
           </div>
 
           <div className={styles.div_button}>
-            <button className={styles.btn_join}>Join</button>
-            <div className={styles.bubble_btn}>
+            {join ? (
+              <button
+                className={styles.btn_joined}
+                onClick={() => setJoin(!join)}
+              >
+                Joined
+              </button>
+            ) : (
+              <button
+                className={styles.btn_join}
+                onClick={() => setJoin(!join)}
+              >
+                Join
+              </button>
+            )}
+            <div
+              className={styles.bubble_btn}
+              onClick={() => setSideCardShow(!sideCardShow)}
+            >
               <Ellipsis />
+              {sideCardShow && (
+                <SideCard
+                  iconOne={<Bell />}
+                  iconTwo={<Bookmark />}
+                  iconThree={<EyeOff />}
+                  iconFour={<Flag />}
+                  textOne="Follow Post"
+                  textTwo="Save"
+                  textThree="hide"
+                  textFour="report"
+                  light={light}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -112,9 +158,30 @@ export function Card({
             <MessageCircle className={styles.commentBtn} />
             <p>{comment}</p>
           </div>
-          <div className={styles.div_share}>
-            <CiShare2 className={styles.shareBtn} /> <p>Share</p>
+          <div
+            className={styles.div_share}
+            onClick={() => {
+              setSideCardShareShow(!sideCardShareShow);
+            }}
+          >
+            <CiShare2 className={styles.shareBtn} />
+            <p>Share</p>
           </div>
+          {sideCardShareShow && (
+            <div className={styles.sideCardWrapper}>
+              <SideCard
+                iconOne={<Link />}
+                iconTwo={<Facebook />}
+                iconThree={<Mail />}
+                iconFour={<Instagram />}
+                textOne="Copy Link"
+                textTwo="Facebook"
+                textThree="WhatsApp"
+                textFour="Instagram"
+                light={light}
+              />
+            </div>
+          )}
         </div>
       </article>
     </>

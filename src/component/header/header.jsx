@@ -36,10 +36,6 @@ export function Header({ show, setShow, light, setLight }) {
             onChange={searchTermSetter}
           />
         </div>
-
-        <button className={styles.login_btn}>
-          <LogIn />
-        </button>
         <div className={styles.btn_wrapper}>
           <button
             onClick={() => {
@@ -84,10 +80,6 @@ export function Header({ show, setShow, light, setLight }) {
         </div>
 
         <div className={styles.btn_and_img}>
-          <button className={styles.login_btn}>
-            <LogIn />
-            <p>Log In</p>
-          </button>
           <div className={styles.btn_wrapper}>
             <button
               onClick={() => {

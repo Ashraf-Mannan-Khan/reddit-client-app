@@ -12,6 +12,7 @@ import {
   searchQuery,
   removeSearchTerm,
 } from "../../features/searchReddit/searchTermSlice";
+import { BiColor } from "react-icons/bi";
 
 export function Header({ show, setShow, light, setLight }) {
   const [click, setClick] = useState(false);
@@ -75,7 +76,9 @@ export function Header({ show, setShow, light, setLight }) {
           />
           <X
             className={styles.closeBtn}
-            onClick={() => dispatch(removeSearchTerm())}
+            onClick={() => dispatch(removeSearchTerm())
+              
+            }
           />
         </div>
 

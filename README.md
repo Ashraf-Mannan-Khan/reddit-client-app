@@ -1,17 +1,62 @@
-# React + Vite
+# 🚀 Reddit Client App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Reddit client built with React that allows users to browse subreddits, view posts, search content, and explore discussions with a clean and responsive UI.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
+🔗 https://reddit-client-app-tau.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📂 GitHub Repository
+🔗 https://github.com/Ashraf-Mannan-Khan/reddit-client-app
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🔥 Browse popular subreddits
+- 🔎 Search posts dynamically
+- 📱 Fully responsive design (mobile-first)
+- ⚡ Fast API-based data fetching
+- 🔄 Real-time content updates
+- 🎨 Clean and modern UI
+- 📦 Reusable and modular components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# reddit-client-app
+---
+
+## 🛠 Tech Stack
+
+- React.js
+- Redux (State Management)
+- JavaScript (ES6+)
+- HTML5 & CSS3
+- REST API (Reddit API)
+- Vercel (Deployment)
+- Git & GitHub (Version Control)
+
+---
+
+## 🧠 What I Learned
+
+- Managing global state using Redux
+- Handling async API calls and loading states
+- Component-based architecture in React
+- Performance optimization and conditional rendering
+- Building scalable folder structures
+
+---
+
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+git clone https://github.com/Ashraf-Mannan-Khan/reddit-client-app.git
+
+cd reddit-client-app
+
+npm install
+
+npm start
+
+
